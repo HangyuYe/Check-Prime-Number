@@ -28,7 +28,7 @@ func checkPrimeNumber(requestNumber: Double) -> Bool {
     }
 }
 
-func forAnyUnknowNumber(requestRange: Double) {
+func forAnyUnknownNumber(requestRange: Double) {
     
     var primeCounter = 0
     var nonPrime = 0
@@ -45,6 +45,6 @@ func forAnyUnknowNumber(requestRange: Double) {
 }
 
 
-forAnyUnknowNumber(requestRange: 100)
+forAnyUnknownNumber(requestRange: 200)
 
 

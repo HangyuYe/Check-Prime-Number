@@ -1,16 +1,14 @@
 import Foundation
 
-let unknownNumber: Double = 4
-var remainderArray: Array = [Double]()
-
 func checkPrimeNumber(requestNumber: Double) -> Bool {
-
+    
+    var remainderArray: Array = [Double]()
     var n: Double = 1
     var counter = 0
 
-    for _ in 1...Int(unknownNumber) {
+    for _ in 1...Int(requestNumber) {
         
-        let remainder = unknownNumber.truncatingRemainder(dividingBy: n)
+        let remainder = requestNumber.truncatingRemainder(dividingBy: n)
         remainderArray.append(remainder)
 
         n += 1
@@ -30,6 +28,23 @@ func checkPrimeNumber(requestNumber: Double) -> Bool {
     }
 }
 
-checkPrimeNumber(requestNumber: unknownNumber)
+func forAnyUnknowNumber(requestRange: Double) {
+    
+    var primeCounter = 0
+    var nonPrime = 0
+    
+    for i in 1...Int(requestRange) {
+        if checkPrimeNumber(requestNumber: Double(i)) == true {
+            primeCounter += 1
+        } else {
+            nonPrime += 1
+        }
+    }
+    
+    print("There are \(primeCounter) prime numbers and \(nonPrime) no prime numbers within \(Int(requestRange))")
+}
+
+
+forAnyUnknowNumber(requestRange: 100)
 
 

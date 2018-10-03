@@ -41,7 +41,7 @@ func forAnyUnknownNumber(requestRange: Double) {
         }
     }
     
-    print("There are \(primeCounter) prime numbers and \(nonPrime) no prime numbers within \(Int(requestRange))")
+    print("There are \(primeCounter) prime numbers and \(nonPrime) non prime numbers within \(Int(requestRange))")
 }
 
 

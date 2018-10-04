@@ -2,6 +2,11 @@ import Foundation
 
 func checkPrimeNumber(requestNumber: Double) -> Bool {
     
+    if Int(requestNumber) == 1 {
+        print("1 is no longer belong to prime number")
+        return false
+    }
+    
     var remainderArray: Array = [Double]()
     var n: Double = 1
     var counter = 0

@@ -50,7 +50,7 @@ func forAnyUnknownNumber(requestRange: Double) {
         }
     }
     
-    print("There are \(primeCounter) prime numbers and \(nonPrime) non prime numbers within \(Int(requestRange))")
+    print("There are \(primeCounter) prime numbers and \(nonPrime) composite numbers within \(Int(requestRange))")
 }
 
 func listPrimeNumber(requestRange: Double) -> Array<Any> {

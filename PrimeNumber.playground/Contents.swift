@@ -30,21 +30,42 @@ func checkPrimeNumber(requestNumber: Double) -> Bool {
 
 func forAnyUnknownNumber(requestRange: Double) {
     
-    var primeCounter = 0
+    var primeCounter = -1
     var nonPrime = 0
     
-    for i in 1...Int(requestRange) {
-        if checkPrimeNumber(requestNumber: Double(i)) == true {
-            primeCounter += 1
-        } else {
-            nonPrime += 1
+    if requestRange == 1 {
+        print("Range 1 to 1 is not make any sense")
+    } else {
+        for i in 1...Int(requestRange) {
+            if checkPrimeNumber(requestNumber: Double(i)) == true {
+                primeCounter += 1
+            } else {
+                nonPrime += 1
+            }
         }
     }
     
     print("There are \(primeCounter) prime numbers and \(nonPrime) non prime numbers within \(Int(requestRange))")
 }
 
+func listPrimeNumber(requestRange: Double) -> Array<Any> {
+    var primeArray: Array = [Double]()
+    
+    if Int(requestRange) == 1 {
+        primeArray.append(1.0)
+        print("1 is not prime number")
+        return primeArray
+        
+    } else {
+        for i in 1...Int(requestRange) {
+            if checkPrimeNumber(requestNumber: Double(i)) == true {
+                primeArray.append(Double(i))
+            }
+        }
+    }
+        
+    return primeArray
+}
 
-forAnyUnknownNumber(requestRange: 200)
-
+listPrimeNumber(requestRange: 10)
 

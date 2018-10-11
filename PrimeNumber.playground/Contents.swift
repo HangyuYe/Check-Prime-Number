@@ -2,11 +2,6 @@ import Foundation
 
 func checkPrimeNumber(requestNumber: Double) -> Bool {
     
-    if Int(requestNumber) == 1 {
-        print("1 is no longer belong to prime number")
-        return false
-    }
-    
     var remainderArray: Array = [Double]()
     var n: Double = 1
     var counter = 0
@@ -54,23 +49,25 @@ func forAnyUnknownNumber(requestRange: Double) {
 }
 
 func listPrimeNumber(requestRange: Double) -> Array<Any> {
-    var primeArray: Array = [Double]()
+    var primeArray: Array = [Int]()
     
     if Int(requestRange) == 1 {
-        primeArray.append(1.0)
+        primeArray.append(1)
         print("1 is not prime number")
         return primeArray
         
     } else {
         for i in 1...Int(requestRange) {
             if checkPrimeNumber(requestNumber: Double(i)) == true {
-                primeArray.append(Double(i))
+                let convertIndex = Int(i)
+                primeArray.append(convertIndex)
             }
         }
     }
-        
+    
+    print("In range \(requestRange) have \(primeArray.count) prime numbers, here it is: \(primeArray), but 1 is not belong to prime number ever!")
     return primeArray
 }
 
-listPrimeNumber(requestRange: 10)
+listPrimeNumber(requestRange: 100)
 

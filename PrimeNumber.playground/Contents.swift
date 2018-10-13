@@ -65,9 +65,9 @@ func listPrimeNumber(requestRange: Double) -> Array<Any> {
         }
     }
     
-    print("In range \(requestRange) have \(primeArray.count) prime numbers, here it is: \(primeArray), but 1 is not belong to prime number ever!")
+    print("In range \(Int(requestRange)) have \(primeArray.count) prime numbers, here it is: \(primeArray), but 1 is not belong to prime number ever!")
     return primeArray
 }
 
-listPrimeNumber(requestRange: 100)
+listPrimeNumber(requestRange: 200)
 

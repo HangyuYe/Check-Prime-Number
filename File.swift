@@ -8,12 +8,12 @@ func checkPrimeNumber(requestNumber: Double) -> Bool {
     var remainderArray: Array = [Double]()
     var n: Double = 1
     var counter = 0
-
+    
     for _ in 1...Int(requestNumber) {
         
         let remainder = requestNumber.truncatingRemainder(dividingBy: n)
         remainderArray.append(remainder)
-
+        
         n += 1
     }
     
@@ -73,4 +73,3 @@ func listPrimeNumber(requestRange: Double) -> Array<Any> {
 }
 
 listPrimeNumber(requestRange: 200)
-

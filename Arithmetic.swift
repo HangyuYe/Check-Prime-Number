@@ -1,10 +1,14 @@
 //Copyright SoftChain Foundation Ltd. 2018, All Rights Reserved
 //Playground - noun: a place where people can play
 
+//Copyright SoftChain Foundation Ltd. 2018, All Rights Reserved
+//Playground - noun: a place where people can play
+
 import Foundation
 
 class PrimeNumber {
     
+    //Check given number are prime number or not
     func checkPrimeNumber(requestNumber: Double) -> Bool {
         
         var remainderArray: Array = [Double]()
@@ -33,7 +37,8 @@ class PrimeNumber {
         }
     }
     
-    func forAnyUnknownNumber(requestRange: Double) {
+    //Check how many prime numbers in this range
+    func forAnyUnknownNumber(requestRange: Double) -> String {
         
         var primeCounter = -1
         var nonPrime = 0
@@ -50,9 +55,10 @@ class PrimeNumber {
             }
         }
         
-        print("There are \(primeCounter) prime numbers and \(nonPrime) composite numbers within \(Int(requestRange))")
+        return "There are \(primeCounter) prime numbers and \(nonPrime) composite numbers under \(Int(requestRange))"
     }
     
+    //List all numbers in a given range
     func listPrimeNumber(requestRange: Double) -> Array<Any> {
         var primeArray: Array = [Int]()
         
@@ -74,4 +80,37 @@ class PrimeNumber {
         return primeArray
     }
 }
-listPrimeNumber(requestRange: 200)
+
+//Call function to check prime number
+let unknownNumber: Double = 17
+
+let checkPrimeNumber = PrimeNumber()
+let resultOfunknownNumber = checkPrimeNumber.checkPrimeNumber(requestNumber: unknownNumber)
+if resultOfunknownNumber == true {
+    print("Yes!")
+} else {
+    print("No!")
+}
+
+//Call function to get how many prime number in a given range!
+let givenRange: Double = 100
+
+let forRangeOfNumbers = PrimeNumber()
+let resultOfRangeOfNumbers = forRangeOfNumbers.forAnyUnknownNumber(requestRange: givenRange)
+
+print(resultOfRangeOfNumbers)
+
+//Call function to list all prime number in a give range!
+let listRange: Double = 100
+
+let forListOfRange = PrimeNumber()
+let resultOfArray = forListOfRange.listPrimeNumber(requestRange: listRange)
+
+
+
+
+
+
+
+
+

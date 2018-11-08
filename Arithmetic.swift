@@ -74,25 +74,4 @@ class PrimeNumber {
         return primeArray
     }
 }
-
-class Numbers {
-    var num0 = 1
-    var num1 = 2
-    var num2 = 3
-    
-    func pulsAllNumbers() -> Int {
-        let totalAmount = num0 + num1 + num2
-        return totalAmount
-    }
-    
-    func minusNumbers() -> Int {
-        let minusNumber = num2 - num1 - num0
-        return minusNumber
-    }
-}
-
-
-
-
-
-
+listPrimeNumber(requestRange: 200)
